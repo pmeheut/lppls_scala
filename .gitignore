@@ -1,0 +1,9 @@
+.DS_Store
+._.DS_Store 
+target/
+lib_managed/
+boot/
+src_managed/
+.idea/
+.idea_modules/
+.bsp

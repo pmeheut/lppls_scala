@@ -1,0 +1,9 @@
+curl -fLo cs https://git.io/coursier-cli-"$(uname | tr LD ld)"
+chmod +x cs
+./cs install cs
+# Add cs to PATH in .bashrc
+# Disconnect/reconnect
+rm cs
+cs install scala3-compiler
+cs install scala3
+cs install sbt
