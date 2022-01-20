@@ -7,8 +7,9 @@ import scala.util.Using
 
 
 object ComputeIndicators {
-  val DataDirectory = s"${System.getProperty("user.home")}/Dropbox/lbo/crash_detection"
-  val DefaultInputFile = s"$DataDirectory/df_all_fields_and_features.feather"
+  val DataDirectory = s"${System.getProperty("user.home")}"
+  val DefaultInputFile = s"$DataDirectory/spx.feather"
+  val DefaultOutputFile = s"$DataDirectory/lppls.feather"
 
   val feather = py.module("feather")
   val pd = py.module("pandas")
@@ -16,7 +17,7 @@ object ComputeIndicators {
 
 
   case class Config(inputFile: String = DefaultInputFile,
-                    outputFile: String = DefaultInputFile,
+                    outputFile: String = DefaultOutputFile,
                     parallel: Boolean = true,
                     numberOfElements: Int = -1,
                     one: Boolean = false,
